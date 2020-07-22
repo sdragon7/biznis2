@@ -2,12 +2,16 @@
   <tableName>DossierComplianceDecision</tableName>
   <rowNumberCol>
     <hideColumn>false</hideColumn>
-    <width>22</width>
+    <width>50</width>
   </rowNumberCol>
   <descriptionCol>
     <hideColumn>false</hideColumn>
-    <width>22</width>
+    <width>150</width>
   </descriptionCol>
+  <ruleNameColumn>
+    <hideColumn>true</hideColumn>
+    <width>150</width>
+  </ruleNameColumn>
   <metadataCols/>
   <attributeCols>
     <attribute-column52>
@@ -18,7 +22,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>90</width>
+      <width>130</width>
       <attribute>salience</attribute>
       <reverseOrder>true</reverseOrder>
       <useRowNumber>true</useRowNumber>
@@ -31,7 +35,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>-1</width>
+      <width>100</width>
       <attribute>no-loop</attribute>
       <reverseOrder>false</reverseOrder>
       <useRowNumber>false</useRowNumber>
@@ -54,7 +58,6 @@
           <header>factEnum</header>
           <constraintValueType>1</constraintValueType>
           <factField>factEnum</factField>
-          <fieldType>Comparable</fieldType>
           <operator>==</operator>
           <parameters/>
         </condition-column52>
@@ -71,11 +74,10 @@
       <conditions>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>DossierRevision wrapper</header>
           <constraintValueType>1</constraintValueType>
           <factField>this</factField>
-          <fieldType>this</fieldType>
           <operator>!= null</operator>
           <parameters/>
         </condition-column52>
@@ -90,7 +92,6 @@
           <header>Operation IN...</header>
           <constraintValueType>1</constraintValueType>
           <factField>operation</factField>
-          <fieldType>String</fieldType>
           <operator>in</operator>
           <parameters/>
         </condition-column52>
@@ -101,41 +102,37 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Dossier status</header>
           <constraintValueType>1</constraintValueType>
           <factField>status</factField>
-          <fieldType>Comparable</fieldType>
           <operator>==</operator>
           <parameters/>
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Status is null</header>
           <constraintValueType>1</constraintValueType>
           <factField>status</factField>
-          <fieldType>Comparable</fieldType>
           <operator>== null</operator>
           <parameters/>
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Null amount</header>
           <constraintValueType>1</constraintValueType>
           <factField>amount</factField>
-          <fieldType>BigDecimal</fieldType>
           <operator>== null</operator>
           <parameters/>
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Our position is null</header>
           <constraintValueType>1</constraintValueType>
           <factField>ourPositionRole</factField>
-          <fieldType>String</fieldType>
           <operator>== null</operator>
           <parameters/>
         </condition-column52>
@@ -146,11 +143,10 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Compliance in</header>
           <constraintValueType>1</constraintValueType>
           <factField>compliance</factField>
-          <fieldType>String</fieldType>
           <operator>in</operator>
           <parameters/>
         </condition-column52>
@@ -161,47 +157,43 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Amount &gt;</header>
           <constraintValueType>1</constraintValueType>
           <factField>amount</factField>
-          <fieldType>BigDecimal</fieldType>
           <operator>&gt;</operator>
           <parameters/>
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Issuance date is null</header>
           <constraintValueType>1</constraintValueType>
           <factField>issuanceDate</factField>
-          <fieldType>Date</fieldType>
           <operator>== null</operator>
           <parameters/>
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Expiry date is null</header>
           <constraintValueType>1</constraintValueType>
           <factField>expiryDate</factField>
-          <fieldType>Date</fieldType>
           <operator>== null</operator>
           <parameters/>
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>issuance date is not null</header>
           <constraintValueType>1</constraintValueType>
           <factField>issuanceDate</factField>
-          <fieldType>Date</fieldType>
           <operator>!= null</operator>
           <parameters/>
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Issuance date &lt;</header>
           <constraintValueType>5</constraintValueType>
           <factField>FunctionUtils.getPeriod(issuanceDate) &lt; $param</factField>
@@ -213,7 +205,6 @@
           <header>Expiry date is not null</header>
           <constraintValueType>1</constraintValueType>
           <factField>expiryDate</factField>
-          <fieldType>Date</fieldType>
           <operator>!= null</operator>
           <parameters/>
         </condition-column52>
@@ -227,7 +218,7 @@
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Maximal duration (&lt;)</header>
           <constraintValueType>5</constraintValueType>
           <factField>FunctionUtils.getPeriod(expiryDate) &lt; $param</factField>
@@ -235,7 +226,7 @@
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Expiry Date &lt; Issuance date</header>
           <constraintValueType>5</constraintValueType>
           <factField>FunctionUtils.isDateBeforeAnother(issuanceDate,ExpiryDate) == $param</factField>
@@ -243,7 +234,7 @@
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Are commissions currency empty</header>
           <constraintValueType>5</constraintValueType>
           <factField>FunctionUtils.areCommissionsCurrencyEmpty(this.dossierRevision) == $param</factField>
@@ -251,11 +242,10 @@
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>BankUnit is null</header>
           <constraintValueType>1</constraintValueType>
           <factField>bankUnit</factField>
-          <fieldType>String</fieldType>
           <operator>== null</operator>
           <parameters/>
         </condition-column52>
@@ -266,31 +256,28 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Product type</header>
           <constraintValueType>1</constraintValueType>
           <factField>productType</factField>
-          <fieldType>Comparable</fieldType>
           <operator>==</operator>
           <parameters/>
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Confirm type is null</header>
           <constraintValueType>1</constraintValueType>
           <factField>confirmationType</factField>
-          <fieldType>String</fieldType>
           <operator>== null</operator>
           <parameters/>
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Payment type is null</header>
           <constraintValueType>1</constraintValueType>
           <factField>paymentType</factField>
-          <fieldType>String</fieldType>
           <operator>== null</operator>
           <parameters/>
         </condition-column52>
@@ -300,17 +287,15 @@
           <header>Guarantee type is null</header>
           <constraintValueType>1</constraintValueType>
           <factField>guaranteeType</factField>
-          <fieldType>String</fieldType>
           <operator>== null</operator>
           <parameters/>
         </condition-column52>
         <condition-column52>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Null currency</header>
           <constraintValueType>1</constraintValueType>
           <factField>currency</factField>
-          <fieldType>String</fieldType>
           <operator>== null</operator>
           <parameters/>
         </condition-column52>
@@ -321,11 +306,10 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Amount &lt;</header>
           <constraintValueType>1</constraintValueType>
           <factField>amount</factField>
-          <fieldType>BigDecimal</fieldType>
           <operator>&lt;</operator>
           <parameters/>
         </condition-column52>
@@ -363,7 +347,7 @@
             <isOtherwise>false</isOtherwise>
           </typedDefaultValue>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Forbidden</header>
           <constraintValueType>1</constraintValueType>
           <factField>forbidden</factField>
@@ -420,7 +404,7 @@
         <isOtherwise>false</isOtherwise>
       </typedDefaultValue>
       <hideColumn>false</hideColumn>
-      <width>-1</width>
+      <width>100</width>
       <header>Optional parameter</header>
       <factType>Breach</factType>
       <boundName>breach</boundName>
@@ -440,7 +424,7 @@
       <childColumns>
         <org.drools.workbench.models.guided.dtable.shared.model.BRLActionVariableColumn>
           <hideColumn>false</hideColumn>
-          <width>-1</width>
+          <width>100</width>
           <header>Add Breach</header>
           <varName></varName>
           <fieldType>Boolean</fieldType>
@@ -500,14 +484,21 @@
       </org.drools.workbench.models.datamodel.imports.Import>
     </imports>
   </imports>
-  <packageName>ch.mitsa.credoc.rules.dossier</packageName>
+  <packageName>com.credoc.test</packageName>
+  <version>739</version>
   <tableFormat>EXTENDED_ENTRY</tableFormat>
+  <hitPolicy>NONE</hitPolicy>
   <data>
     <list>
       <value>
         <valueNumeric class="int">1</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -715,6 +706,11 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueNumeric class="int">19</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
@@ -906,6 +902,11 @@
         <valueNumeric class="int">3</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -1113,6 +1114,11 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueNumeric class="int">17</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
@@ -1312,6 +1318,11 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueNumeric class="int">16</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
@@ -1503,6 +1514,11 @@
         <valueNumeric class="int">6</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -1710,6 +1726,11 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueNumeric class="int">14</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
@@ -1901,6 +1922,11 @@
         <valueNumeric class="int">8</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -2108,6 +2134,11 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueNumeric class="int">12</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
@@ -2299,6 +2330,11 @@
         <valueNumeric class="int">10</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -2506,6 +2542,11 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueNumeric class="int">10</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
@@ -2705,6 +2746,11 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueNumeric class="int">9</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
@@ -2850,9 +2896,8 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric>0</valueNumeric>
-        <valueString></valueString>
-        <dataType>NUMERIC_BIGDECIMAL</dataType>
+        <valueString>0</valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -2897,6 +2942,11 @@
         <valueNumeric class="int">13</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -2961,9 +3011,8 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
-        <valueNumeric>1000000</valueNumeric>
-        <valueString></valueString>
-        <dataType>NUMERIC_BIGDECIMAL</dataType>
+        <valueString>1000000</valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -3097,6 +3146,11 @@
         <valueNumeric class="int">14</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -3304,6 +3358,11 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueNumeric class="int">6</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
@@ -3495,6 +3554,11 @@
         <valueNumeric class="int">16</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -3702,6 +3766,11 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueNumeric class="int">4</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
@@ -3893,6 +3962,11 @@
         <valueNumeric class="int">18</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
@@ -4100,6 +4174,11 @@
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
         <valueNumeric class="int">2</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
@@ -4291,6 +4370,11 @@
         <valueNumeric class="int">20</valueNumeric>
         <valueString></valueString>
         <dataType>NUMERIC_INTEGER</dataType>
+        <isOtherwise>false</isOtherwise>
+      </value>
+      <value>
+        <valueString></valueString>
+        <dataType>STRING</dataType>
         <isOtherwise>false</isOtherwise>
       </value>
       <value>
